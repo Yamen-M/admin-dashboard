@@ -315,15 +315,6 @@ input{
 }
 
 
-.special-pic{
-    border: 1px solid black;
-}
-.trend-picture{
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-}
-
 .sideContent-2{
     padding-top: 40px;
     display: grid;
@@ -344,24 +335,241 @@ input{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);   
 }
 
+.special-pic{
+    border: 1px solid black;
+}
+.trend-picture{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
 .trending-topic{
     display: flex;
     gap: 20px;
     align-items: center;
 }
-
 .trend-info{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-
 .trend-title{
     font-size: 16px;
     color: black;
 }
-
 .trend-text{
     font-size: 14px;
     color: #626262;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.announcement-title:hover {
+    color: #1892d3;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.trend-title:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: text-decoration 0.2s ease;
+}
+
+.header-buttons:hover {
+    background-color: #147bb3;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+.side-element:hover {
+    transform: translateX(5px);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.side-element:hover .sidebar-text {
+    color: #ffeb3b;
+    transition: color 0.2s ease;
+}
+
+.project-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+    transition: all 0.2s ease;
+}
+
+.trending-topic:hover {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+input {
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 0 3px rgba(24, 146, 211, 0.3);
+    outline: none;
+}
+
+.header-buttons {
+    transition: all 0.2s ease, transform 0.1s ease;
+}
+
+.header-buttons:active {
+    transform: translateY(2px);
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .top-header {
+        gap: 40px;
+    }
+    input {
+        width: 400px;
+    }
+    .bottom-header {
+        gap: 100px;
+    }
+    
+    .mainContent-projects {
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .mainContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+    
+    .sidebar {
+        grid-column: 1;
+        grid-row: 1;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .header {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .content {
+        grid-column: 1;
+        grid-row: 3;
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar-content-1, 
+    .sidebar-content-2 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+    
+    .side-element {
+        grid-template-columns: 30px auto;
+    }
+    
+    .top-header, 
+    .bottom-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .right-actions {
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    
+    .sideContent {
+        grid-column: 1;
+        padding-top: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+        margin: 0 10px;
+    }
+    
+    .top-header {
+        padding-left: 20px;
+        gap: 20px;
+    }
+    
+    input {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .welcome-user {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .right-actions {
+        justify-content: center;
+        padding-top: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .top-header {
+        padding-left: 20px;
+    }
+    
+    input {
+        width: 100%;
+    }
+    
+    .bottom-header {
+        padding-left: 20px;
+        gap: 30px;
+    }
+    
+    .mainContent-projects {
+        grid-template-columns: 1fr;
+    }
+    
+    .project {
+        width: auto;
+        margin: 0 10px;
+    }
+    
+    .sidebar-content-1, 
+    .sidebar-content-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sidebar-text {
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    .mainContent-projects {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-icons {
+        justify-content: center;
+        padding-right: 0;
+    }
+    
+    .sidebar-text {
+        font-size: 18px;
+    }
+    
+    .dashboard-title {
+        font-size: 24px;
+    }
 }
