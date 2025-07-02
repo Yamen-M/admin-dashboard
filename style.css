@@ -3,26 +3,30 @@ html body{
     padding: 0;
     margin: 0;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .mainContainer{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 330px 1fr;
+    grid-template-rows: 195px 1fr;
     background-color: blueviolet;
     height: 100vh;
+    column-gap: 0;
 }
 
 .sidebar{
-    width: 300px;
     grid-column: 1/2;
-    grid-row: 1/4;
+    grid-row: 1/3;
     display: grid;
     grid-template-rows: auto auto 1fr;
     align-content: start;
     gap: 30px;
     height: 100%;
-    background-color: rgba(0, 173, 230, 0.768);
+    background-color: #1892d3;
     padding-left: 25px;
+    margin-right: 0;
+    padding-right: 0;
 }
 
 p{
@@ -48,7 +52,6 @@ p{
     height: 45px;
 }
 .dashboard-title{
-    font-family: sans-serif;
     font-size: 30px;
     font-weight: 700;
     color: white;
@@ -67,7 +70,7 @@ p{
 
 .sidebar-content-1{
     padding-left: 10px;
-    margin-top: 15px;
+    margin-top: 14px;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     gap: 15px;
@@ -85,9 +88,112 @@ p{
     color: white;
     font-size: 24px;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
 }
 
 .dashboard-title, .sidebar-text {
     margin: 0; 
+}
+
+.header{
+    background-color: white;
+    grid-column: 2/3;
+    width: 100%;
+    grid-row: 1/2;
+}
+
+.top-header{
+    padding-top: 15px;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px
+}
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+input{
+    width: 660px;
+    height: 30px;
+    background-color: #e1e8f0;
+    border: 1px solid #e1e8f0;
+    border-radius: 20px;
+}
+.right-icon-options{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.icon-bell{
+    width: 25px;
+    height: 25px;
+}
+
+.mini-profile-picture, .profile-picture{
+    height: 55px;
+    width: 55px;
+    border-radius: 50px;
+}
+.top-header-name{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.bottom-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 50px;
+    gap: 250px;
+}
+
+.welcome-user{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-top: 2px;    
+}
+
+.profile-picture{
+    height: 80px;
+    width: 80px;
+}
+.welcome-message{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.welcome-name{
+    font-size: 26px;
+}
+
+.right-actions{
+    display: flex;
+    padding-top: 5px;
+    padding-left: 32px;
+    gap: 30px;
+}
+.header-buttons{
+    background-color: #1892d3;
+    width: 110px;
+    height: 44px;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer; 
+    margin: 0;
+    display: inline-block; 
+}
+
+
+.content{
+    background-color: greenyellow;
+    grid-row: 2/3;
 }
