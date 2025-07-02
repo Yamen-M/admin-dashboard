@@ -9,7 +9,7 @@ html body{
 .mainContainer{
     display: grid;
     grid-template-columns: 330px 1fr;
-    grid-template-rows: 195px 1fr;
+    grid-template-rows: 193px 1fr;
     background-color: blueviolet;
     height: 100vh;
     column-gap: 0;
@@ -77,7 +77,7 @@ p{
 }
 .sidebar-content-2{
     padding-left: 10px;
-    padding-bottom: 100px;
+    padding-bottom: 430px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 15px;
@@ -96,9 +96,11 @@ p{
 
 .header{
     background-color: white;
+    position: relative;
     grid-column: 2/3;
     width: 100%;
     grid-row: 1/2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .top-header{
@@ -194,6 +196,78 @@ input{
 
 
 .content{
-    background-color: greenyellow;
+    background-color: #e1e8f0;
     grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 900px 1fr;
+    padding-top: 35px;
+    padding-bottom: 60px;
+}
+.mainContent{
+    grid-column: 1/2;
+    padding-left: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+}
+.mainContent-title{
+    font-size: 22px;
+    font-weight: 550;
+}
+.mainContent-projects{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 35px;
+}
+.project{
+    border-left: 9px solid rgb(252, 170, 17);
+    border-radius: 9px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    width: 410px;
+    height: 230px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: space-between;
+}
+
+.project-text{
+    justify-self: start;
+    align-self: center;
+    padding-left: 25px;
+    padding-top: 42px;    
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 5px;
+}
+.project-title{
+
+    font-weight: 700;
+    font-size: 20px;
+}
+.project-details, .project-details-2{
+    color: #626262;
+    width: 325px;
+    font-size: 17px;
+}
+.project-details-2{
+    width: 350px;
+}
+.project-icons{
+    display: flex;
+    justify-self: end;
+    align-items: end;
+    gap: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+}
+.p-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.sideContent{
+    grid-column: 2/3;
+    background-color: red;
 }
